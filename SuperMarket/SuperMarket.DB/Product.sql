@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Product]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY,
+	[Label] NVARCHAR
+)
