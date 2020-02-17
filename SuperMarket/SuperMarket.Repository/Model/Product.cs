@@ -1,4 +1,4 @@
-﻿namespace SuperMarket.Contracts
+﻿namespace SuperMarket.Repository.Model
 {
     public class Product
     {
