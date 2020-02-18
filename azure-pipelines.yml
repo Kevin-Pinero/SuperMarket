@@ -4,7 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+  batch: true
+  branches:
+    include:
+    - master
 
 pool:
   vmImage: 'windows-latest'
@@ -17,7 +20,7 @@ variables:
   minor: 0
   patch: 0
   
-name: SuperMarket_$(major).$(minor).$(patch).$(Rev:.r)_$(Build.SourceBranchName)
+name: SuperMarket_$(major).$(minor).$(patch)$(Rev:.r)_$(Build.SourceBranchName)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -41,5 +44,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'SuperMarket_$(major).$(minor).$(patch).$(Rev:.r)_$(Build.SourceBranchName)'
+    ArtifactName: 'SuperMarket_$(major).$(minor).$(patch)$(Rev:.r)_$(Build.SourceBranchName)'
     publishLocation: 'Container'
