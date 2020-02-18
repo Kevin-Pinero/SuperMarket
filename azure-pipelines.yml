@@ -38,6 +38,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+          **\*test*.dll
+          !**\*TestAdapter.dll
+          !**\obj\**
 
 - task: PublishTestResults@2
   inputs:
@@ -47,7 +52,6 @@ steps:
     testRunTitle: '''SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(Build.SourceBranchName)'''
     buildPlatform: '$(buildPlatform)'
     buildConfiguration: '$(buildConfiguration)'
-
 
 - task: PublishBuildArtifacts@1
   inputs:
