@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMarket.Service", "Supe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMarket.Repository", "SuperMarket.Repository\SuperMarket.Repository.csproj", "{CD1CA3C8-4AA6-47CE-AB56-9BA1435B1480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMarket.Service.Tests", "SuperMarket.Service.Tests\SuperMarket.Service.Tests.csproj", "{0C1C86E2-3ACB-40E1-8B57-3069C773CF55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{195C3B55-44A0-4D9B-8BD8-9B7288BFE212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,9 +39,16 @@ Global
 		{CD1CA3C8-4AA6-47CE-AB56-9BA1435B1480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD1CA3C8-4AA6-47CE-AB56-9BA1435B1480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD1CA3C8-4AA6-47CE-AB56-9BA1435B1480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1C86E2-3ACB-40E1-8B57-3069C773CF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1C86E2-3ACB-40E1-8B57-3069C773CF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1C86E2-3ACB-40E1-8B57-3069C773CF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1C86E2-3ACB-40E1-8B57-3069C773CF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C1C86E2-3ACB-40E1-8B57-3069C773CF55} = {195C3B55-44A0-4D9B-8BD8-9B7288BFE212}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CCB80D6F-BA03-4AA8-8B14-750B62CD1CEA}

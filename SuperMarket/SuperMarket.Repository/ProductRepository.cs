@@ -6,7 +6,7 @@ namespace SuperMarket.Repository
 {
     public class ProductRepository : IRepository
     {
-        public async Task<IList<Product>> GetAll()
+        public async Task<List<Product>> GetAll()
         {
             return new List<Product>()
             {
@@ -19,6 +19,6 @@ namespace SuperMarket.Repository
     public interface IRepository
     {
         // todo Generic
-        Task<IList<Product>> GetAll();
+        Task<List<Product>> GetAll();
     }
 }

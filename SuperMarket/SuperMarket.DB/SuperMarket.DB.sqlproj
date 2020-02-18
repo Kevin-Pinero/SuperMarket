@@ -60,4 +60,7 @@
   <ItemGroup>
     <Build Include="Product.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Populate-Product.sql" />
+  </ItemGroup>
 </Project>
