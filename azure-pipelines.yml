@@ -17,7 +17,7 @@ variables:
   minor: 0
   patch: 0
   
-name: SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(Build.SourceBranchName)
+name: SuperMarket_$(major).$(minor).$(patch).$(Rev:.r)_$(Build.SourceBranchName)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -41,5 +41,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(Build.SourceBranchName)'
+    ArtifactName: 'SuperMarket_$(major).$(minor).$(patch).$(Rev:.r)_$(Build.SourceBranchName)'
     publishLocation: 'Container'
