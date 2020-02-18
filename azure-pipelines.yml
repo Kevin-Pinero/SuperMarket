@@ -17,7 +17,7 @@ variables:
   minor: 0
   patch: 0
   
-name: SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(Build.SourceBranch)
+name: SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(Build.SourceBranchName)
 
 steps:
 - task: NuGetToolInstaller@1
