@@ -16,9 +16,8 @@ variables:
   major: 0
   minor: 0
   patch: 0
-  label: SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(SourceBrancheName)
   
-name: $(label)
+name: SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)_$(SourceBrancheName)
 
 steps:
 - task: NuGetToolInstaller@1
