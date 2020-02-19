@@ -22,13 +22,12 @@ variables:
 
 steps:
 
-- task: CmdLine@2
-  inputs:
-    script: 'echo $(solution)  echo tree -F'
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
    # $(solution)
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
