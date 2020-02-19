@@ -24,7 +24,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'echo $(solution)'
+    script: 'echo $(solution)  echo tree -F'
 
 - task: DotNetCoreCLI@2
   inputs:
