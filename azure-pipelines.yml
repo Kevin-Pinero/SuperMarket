@@ -28,7 +28,7 @@ steps:
     inputs:
       command: 'restore'
       projects: '$(projects)'
-    feedsToUse: 'select'
+      feedsToUse: 'select'
 
   - task: DotNetCoreCLI@2
     inputs:
