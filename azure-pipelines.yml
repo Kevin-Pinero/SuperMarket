@@ -34,11 +34,20 @@ steps:
     inputs:
       command: 'build'
       projects: $(projects)
+      arguments: '--configuration $(buildConfiguration)'
 
   - task: DotNetCoreCLI@2
     inputs:
       command: 'test'
       projects: $(testProjects)
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'pack'
+      packagesToPack: '**/*.csproj'
+      nobuild: true
+      versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1
     inputs:
