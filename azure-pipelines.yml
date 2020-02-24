@@ -50,11 +50,11 @@ steps:
   - task:  DotNetCoreCLI@2
     inputs:
       command: 'pack'
-      packagesToPack: '**/*.csproj'
+      packagesToPack: '**/SuperMarket.WebAPI.csproj'
       nobuild: true
       versioningScheme: 'off'
       feedsToUse: 'select'
-      arguments: --no-build --output nupkgs
+      arguments: -p:NuspecFile=**/SuperMarket.WebAPI.nuspec
 
   - task: PublishBuildArtifacts@1
     inputs:
