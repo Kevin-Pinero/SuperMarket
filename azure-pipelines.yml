@@ -47,12 +47,13 @@ steps:
     inputs:
       script: 'tree \ /A /F'
 
-  - task: DotNetCoreCLI@2
+  - task:  
     inputs:
       command: 'pack'
       packagesToPack: '**/*.csproj'
       nobuild: true
       versioningScheme: 'off'
+      arguments: --output test
 
   - task: PublishBuildArtifacts@1
     inputs:
