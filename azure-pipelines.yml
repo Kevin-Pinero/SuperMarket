@@ -47,7 +47,7 @@ steps:
     inputs:
       script: 'tree \ /A /F'
 
-  - task:  
+  - task:  DotNetCoreCLI@2
     inputs:
       command: 'pack'
       packagesToPack: '**/*.csproj'
