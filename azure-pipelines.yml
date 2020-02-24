@@ -26,18 +26,21 @@ variables:
 steps:
 
   - task: DotNetCoreCLI@2
+    displayName: Restore nugets
     inputs:
       command: 'restore'
       projects: '$(projects)'
       feedsToUse: 'select'
 
   - task: DotNetCoreCLI@2
+    displayName: Build
     inputs:
       command: 'build'
       projects: $(projects)
       arguments: '--configuration $(buildConfiguration)'
 
   - task: DotNetCoreCLI@2
+    displayName: Execute tests
     inputs:
       command: 'test'
       projects: $(testProjects)
@@ -47,14 +50,13 @@ steps:
     inputs:
       script: 'tree \ /A /F'
 
-  - task:  DotNetCoreCLI@2
-    inputs:
+  - task: DotNetCoreCLI@2
+    displayName: Package NuGet
+    inputs: 
       command: 'pack'
-      packagesToPack: '**/SuperMarket.WebAPI.csproj'
-      nobuild: true
-      versioningScheme: 'off'
-      feedsToUse: 'select'
-      arguments: -p:NuspecFile=**/SuperMarket.WebAPI.nuspec
+      projects: '**/*.csproj'
+      arguments: '--configuration $(BuildConfiguration)'
+      outputDir: '$(Build.ArtifactStagingDirectory)/packages'
 
   - task: PublishBuildArtifacts@1
     inputs:
