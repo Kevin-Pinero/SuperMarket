@@ -43,6 +43,8 @@ steps:
       projects: $(testProjects)
       arguments: '--configuration $(buildConfiguration)'
 
+
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
