@@ -50,7 +50,7 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
-      packagesToPack: 'SuperMarket/SuperMarket.WebAPI.csproj'
+      packagesToPack: '**/SuperMarket.WebAPI.csproj'
       nobuild: true
       versioningScheme: 'off'
 
