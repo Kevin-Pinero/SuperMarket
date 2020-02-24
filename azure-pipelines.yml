@@ -51,12 +51,11 @@ steps:
       script: 'tree \ /A /F'
 
   - task: DotNetCoreCLI@2
-    displayName: Package NuGet
-    inputs: 
+    displayName: 'Create packed NuGet files'
+    inputs:
       command: 'pack'
-      projects: '**/*.csproj'
-      arguments: '--configuration $(BuildConfiguration)'
-      outputDir: '$(Build.ArtifactStagingDirectory)/packages'
+      packagesToPack: '**/*Api.csproj;!**/*Tests.csproj'
+      versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1
     inputs:
