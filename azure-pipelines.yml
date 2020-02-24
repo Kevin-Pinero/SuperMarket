@@ -53,7 +53,7 @@ steps:
       packagesToPack: '**/*.csproj'
       nobuild: true
       versioningScheme: 'off'
-      arguments: --output test
+      arguments: '--output test'
 
   - task: PublishBuildArtifacts@1
     inputs:
