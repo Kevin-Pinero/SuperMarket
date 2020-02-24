@@ -43,7 +43,9 @@ steps:
       projects: $(testProjects)
       arguments: '--configuration $(buildConfiguration)'
 
-
+  - task: CmdLine@2
+    inputs:
+      script: 'tree \ /A /F'
 
   - task: DotNetCoreCLI@2
     inputs:
