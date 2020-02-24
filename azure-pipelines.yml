@@ -48,7 +48,7 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
-      packagesToPack: '**/*.nuspec'
+      packagesToPack: '**/*.csproj'
       versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1
