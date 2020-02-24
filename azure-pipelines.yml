@@ -54,7 +54,7 @@ steps:
       nobuild: true
       versioningScheme: 'off'
       feedsToUse: 'select'
-      arguments: --output test
+      arguments: --no-build --output nupkgs
 
   - task: PublishBuildArtifacts@1
     inputs:
