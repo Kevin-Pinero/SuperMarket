@@ -28,8 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SuperMarket.Repository\SuperMarket.Repository.csproj" />
-    <ProjectReference Include="..\SuperMarket.Service\SuperMarket.Service.csproj" />
+    <ProjectReference Include="..\SuperMarket.Repository\SuperMarket.Repository.csproj" Pack="true"/>
+    <ProjectReference Include="..\SuperMarket.Service\SuperMarket.Service.csproj" Pack="true"/>
   </ItemGroup>
 
 </Project>
