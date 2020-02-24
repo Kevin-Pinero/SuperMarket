@@ -8,6 +8,11 @@
         <description>SuperMarket.WebAPI</description>
     </metadata>
     <files>
-        <file src="bin\Release\*.dll" target="lib" />
+        <file src=".\bin\Release\*\*.dll" target="lib" />
+        <file src=".\bin\Release\*\*.exe" target="lib" />
+        <file src=".\bin\Release\*\*.json" target="lib" />
+       <!-- <file src=".\bin\Release\*\Properties\*.json" target="lib" /> -->
+        <file src=".\bin\Release\*\*.pdb" target="lib" />
+        <file src=".\bin\Release\*\*.config" target="lib" />
     </files>
 </package>
