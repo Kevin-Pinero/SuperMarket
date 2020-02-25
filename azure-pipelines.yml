@@ -71,7 +71,7 @@ steps:
       projects: '**/SuperMarket.WebAPI.csproj'
       custom: pack
       nobuild: true
-      arguments: '-p:NuspecFile=SuperMarket\SuperMarket\SuperMarket.WebAPI.nuspec'
+      arguments: '-p:NuspecFile=~\SuperMarket.WebAPI.nuspec'
 
   - task: PublishBuildArtifacts@1
     inputs:
