@@ -70,7 +70,7 @@ steps:
       command: custom
       projects: '**/SuperMarket.WebAPI.csproj'
       custom: pack
-      arguments: '-p:NuspecFile=SuperMarket/SuperMarket.WebAPI.nuspec -p:NuspecBasePath=SuperMarket/nuget'
+      arguments: '-p:NuspecFile=SuperMarket.WebAPI/SuperMarket.WebAPI.nuspec -p:NuspecBasePath=SuperMarket.WebAPI/nuget'
 
   - task: PublishBuildArtifacts@1
     inputs:
