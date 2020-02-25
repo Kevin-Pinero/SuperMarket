@@ -60,7 +60,7 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'pack'
-      packagesToPack: '**/SuperMarket.WebAPI.nuspec'
+      packagesToPack: '**/*API.nuspec'
       nobuild: true
       versioningScheme: 'off'
 
