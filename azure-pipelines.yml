@@ -50,11 +50,18 @@ steps:
     inputs:
       script: 'tree \ /A /F'
 
+  #- task: DotNetCoreCLI@2
+  #  displayName: 'Create packed NuGet files'
+  #  inputs:
+  #    command: 'pack'
+  #    packagesToPack: '**/*Api.csproj;!**/*Tests.csproj'
+  #    versioningScheme: 'off'
+
   - task: DotNetCoreCLI@2
-    displayName: 'Create packed NuGet files'
     inputs:
       command: 'pack'
-      packagesToPack: '**/*Api.csproj;!**/*Tests.csproj'
+      packagesToPack: '**/SuperMarket.WebAPI.nuspec'
+      nobuild: true
       versioningScheme: 'off'
 
   - task: PublishBuildArtifacts@1
