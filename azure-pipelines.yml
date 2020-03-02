@@ -56,5 +56,5 @@ steps:
   - task: PublishBuildArtifacts@1
     inputs:
       pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
-      artifactName: 'SuperMarket_$(major).$(minor).$(patch)'
+      artifactName: 'SuperMarket_$(major).$(minor).$(patch).$(Build.BuildNumber)'
 
