@@ -46,35 +46,6 @@ steps:
       projects: $(testProjects)
       arguments: '--configuration $(buildConfiguration)'
 
-  #- task: DotNetCoreCLI@2
-  #  displayName: 'Create packed NuGet files'
-  #  inputs:
-  #    command: 'pack'
-  #    packagesToPack: '**/*Api.csproj;!**/*Tests.csproj'
-  #    versioningScheme: 'off'
-
-  #- task: DotNetCoreCLI@2
-  #  inputs:
-  #    command: 'pack'
-  #    packagesToPack: '**/*API.nuspec'
-  #    nobuild: true
-  #    versioningScheme: 'off'
-
-  #- task: DotNetCoreCLI@2
-  #  displayName: 'dotnet custom'
-  #  inputs:
-  #    command: custom
-  #    projects: '**/SuperMarket.WebAPI.csproj'
-  #    custom: pack
-  #    nobuild: true
-  #    arguments: '-p:NuspecFile=SuperMarket.WebAPI.nuspec'
-
-  #- task: PublishBuildArtifacts@1
-  #  inputs:
-  #    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-  #    ArtifactName: 'drop'
-  #    publishLocation: 'Container'
-
   - task: DotNetCoreCLI@2
     inputs:
       command: publish
